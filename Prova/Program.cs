@@ -11,10 +11,9 @@ namespace Prova
             string file1 = Console.ReadLine();
             Console.Write("Inserisci il nome del file 2: ");
             string file2 = Console.ReadLine();
-            int risposta1 = BioinformaticaMetodi.Lunghezza(file1);
-            int risposta2 = BioinformaticaMetodi.Lunghezza(file2);
-            Console.WriteLine($"La lunghezza è {risposta1}");
-            Console.WriteLine($"La lunghezza è {risposta2}");
+            string risposta1 = BioinformaticaMetodi.DNAidentico(file1, file2);
+            int lunghezza = risposta1.Length;
+            Console.WriteLine($"{lunghezza} ; {risposta1}");
         }
     }
 }
