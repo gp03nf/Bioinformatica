@@ -58,5 +58,21 @@ namespace Test
             string identico = BioinformaticaMetodi.DNAidentico(file1, file2);
             Assert.AreEqual(aspettato, identico);
         }
+
+        [TestMethod]
+        public void TestCaratteriDiversi()
+        {
+            int ndiversi = BioinformaticaMetodi.CaratteriDiversi("sensibile.txt", "resistente.txt");
+            int aspettato = 1;
+            Assert.AreEqual(aspettato, ndiversi);
+        }
+
+        [DataTestMethod]
+        [DataRow("sensibile.txt", "resistente.txt", 1)]
+        public void DataTestCaratteriDiversi(string file1, string file2, int aspettato)
+        {
+            int ndiversi = BioinformaticaMetodi.CaratteriDiversi(file1, file2);
+            Assert.AreEqual(aspettato, ndiversi);
+        }
     }
 }

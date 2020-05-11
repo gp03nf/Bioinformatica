@@ -56,5 +56,20 @@ namespace Metodi
             }
             return porzione;
         }
+
+        public static int CaratteriDiversi (string nomefile1, string nomefile2)
+        {
+            string resistente = LetturaFile(nomefile1);
+            string sensibile = LetturaFile(nomefile2);
+            int numero = 0;
+            for (int i = 0; i < resistente.Length; i++)
+            {
+                if (resistente[i] != sensibile[i])
+                {
+                    numero++;
+                }
+            }
+            return numero;
+        }
     }
 }
